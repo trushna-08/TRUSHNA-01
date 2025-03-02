@@ -1,0 +1,379 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-image: url('hero img.avif'); /* Ensure this path is correct */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.booking-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    color: #333;
+}
+
+.booking-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    background-color: #f39c12;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e67e22;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in;
+    }
+
+    .nav-links li {
+        margin: 2rem 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+/* Payment Form Styles */
+.payment-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    color: #333;
+    margin-top: 2rem;
+}
+
+.payment-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.payment-form .form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.payment-form .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.payment-form .form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.payment-form .btn {
+    background-color: #f39c12;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.payment-form .btn:hover {
+    background-color: #e67e22;
+}
+
+/* Destinations Section Styles */
+.destinations {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.destinations h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.package-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+}
+
+.package-card img {
+    width: 100%;
+    height: 300px; /* Increased height */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.package-card h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #333;
+}
+
+.package-card p {
+    padding: 0 1rem;
+    color: #666;
+}
+
+.package-card .btn {
+    display: inline-block;
+    margin: 1rem;
+    background-color: #f39c12;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.package-card .btn:hover {
+    background-color: #e67e22;
+}
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 1rem;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section.about p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.contact span {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.contact i, .socials i {
+    margin-right: 0.5rem;
+}
+
+.socials a {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+}
+
+.socials a:hover {
+    color: #f39c12;
+}
+
+.footer-section.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section.links ul li {
+    margin: 0.5rem 0;
+}
+
+.footer-section.links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section.links ul li a:hover {
+    color: #f39c12;
+}
+
+.footer-section.contact-form .contact-input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.footer-section.contact-form .btn-big {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #222;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
